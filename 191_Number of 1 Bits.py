@@ -11,3 +11,13 @@ Example 1:
 Input: n = 00000000000000000000000000001011
 Output: 3
 Explanation: The input binary string 00000000000000000000000000001011 has a total of three '1' bits.'''
+
+#CODE
+
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        return bin(n).count('1')
+   
+   
+   
+   
