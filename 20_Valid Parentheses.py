@@ -28,14 +28,13 @@ class Solution:
         closing={')':'(',']':'[','}':'{'}
         
         for i in s:
-            if i in closing:
+            if i in "([{":
+                stk.append(i)
+            else:
                 if stk and stk[-1]==closing[i]:
                     stk.pop()
                 else:
                     return False
-            else:
-                stk.append(i)
-                
         return True if not stk else False
 
 
