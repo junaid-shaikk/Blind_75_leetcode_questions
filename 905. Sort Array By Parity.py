@@ -26,13 +26,13 @@ Constraints:
 
 class Solution:
     def sortArrayByParity(self, nums: List[int]) -> List[int]:
+        n=[]
         m=[]
         for i in nums:
             if i%2==0:
+                n.append(i)
+            else:
                 m.append(i)
-        for i in nums:
-            if i%2!=0:
-                m.append(i)
-        return m
+        return n+m
       
       
